@@ -12,7 +12,7 @@ if(isset($_GET['msg'])){
 $today = date('Y-m-d');
 //echo $today;
 
-$sql1="select  SUM(cost*qty) as total1 from invoicing where invoice_date ='".$today."'";
+$sql1="select  SUM(amount_payable) as total1 from subvendor where payment_date ='".$today."'";
 
 $result=mysqli_query($link,$sql1);
 $row=mysqli_fetch_assoc($result);
@@ -29,7 +29,7 @@ $totald=number_format(($uu1),2);
 $c= date("Y-m-d", strtotime("first day of this month"));
 $d= date("Y-m-d", strtotime("last day of this month"));
 
-$sql2="select  SUM(cost*qty) as total2 from invoicing where (invoice_date BETWEEN '".$c."' AND '".$d."')";
+$sql2="select  SUM(amount_payable) as total2 from subvendor where payment_date BETWEEN '".$c."' AND '".$d."'";
 
 $result2=mysqli_query($link,$sql2);
 $row2=mysqli_fetch_assoc($result2);
@@ -40,6 +40,26 @@ $uu2= $row2['total2'];
 
 
 $totalm=number_format(($uu2),2);
+
+
+//$totalm2=number_format(($uu1+$uu2+$uu3+$uu4+$uu5+$uu6+$uu7+$uu8+$uu9+$uu10+$uu11+$uu12+$uu13+$uu14+$uu15+$uu16),2);
+
+?>
+<?php
+$c= date("Y-m-d", strtotime("first day of this month"));
+$d= date("Y-m-d", strtotime("last day of this month"));
+
+$sql2="select  SUM(amount_payable) as total3 from subvendor";
+
+$result2=mysqli_query($link,$sql2);
+$row2=mysqli_fetch_assoc($result2);
+
+
+
+$uu2= $row2['total3'];
+
+
+$totalall=number_format(($uu2),2);
 
 
 //$totalm2=number_format(($uu1+$uu2+$uu3+$uu4+$uu5+$uu6+$uu7+$uu8+$uu9+$uu10+$uu11+$uu12+$uu13+$uu14+$uu15+$uu16),2);

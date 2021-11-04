@@ -32,3 +32,14 @@ if ($result=mysqli_query($link,$sql))
   $counter_month=mysqli_num_rows($result);
   }
 ?>
+
+<?php
+$c= date("Y-m-d", strtotime("first day of this month"));
+$d= date("Y-m-d", strtotime("last day of this month"));
+$sql="SELECT * FROM clients ";
+
+if ($result=mysqli_query($link,$sql))
+  {
+  $counter_all_patients=mysqli_num_rows($result);
+  }
+?>

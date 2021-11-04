@@ -126,8 +126,8 @@
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         
-                        <a class="collapse-item" href="awaiting_confirmation.php">Awaiting Confirmation</a>
-                        <a class="collapse-item" href="awaiting_payments.php">Awaiting Payments</a>
+                        <!-- <a class="collapse-item" href="awaiting_confirmation.php">Awaiting Confirmation</a>
+                        <a class="collapse-item" href="awaiting_payments.php">Awaiting Payments</a> -->
                         <a class="collapse-item" href="processed_payments.php">Processed Payments</a>
                         <a class="collapse-item" href="processed_payments.php">View Proformas Issued</a>
                         <a class="collapse-item" href="commisson.php">View Proformas Issued</a>
