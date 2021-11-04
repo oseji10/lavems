@@ -12,7 +12,7 @@ if(isset($_GET['msg'])){
 $today = date('Y-m-d');
 //echo $today;
 
-$sql1="select  SUM(commission) as total1 from payments where payment_date ='".$today."'";
+$sql1="select  SUM(commission) as total1 from subvendor where payment_date ='".$today."'";
 
 $result=mysqli_query($link,$sql1);
 $row=mysqli_fetch_assoc($result);
@@ -29,7 +29,7 @@ $commd=number_format(($uu1),2);
 $c= date("Y-m-d", strtotime("first day of this month"));
 $d= date("Y-m-d", strtotime("last day of this month"));
 
-$sql2="select  SUM(commission) as total2 from payments where (payment_date BETWEEN '".$c."' AND '".$d."')";
+$sql2="select  SUM(commission) as total2 from subvendor where (payment_date BETWEEN '".$c."' AND '".$d."')";
 
 $result2=mysqli_query($link,$sql2);
 $row2=mysqli_fetch_assoc($result2);

@@ -42,7 +42,7 @@
     </div>
 </div>
 
-<!-- Earnings (Monthly) Card Example -->
+<!-- All My Clients-->
 <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-success shadow h-100 py-2">
         <div class="card-body">
@@ -50,7 +50,7 @@
                 <div class="col mr-2">
                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                         All My Clients</div>
-                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $counter_all; ?></div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800"><?php echo $counter_all_patients; ?></div>
                 </div>
                 <div class="col-auto">
                     <i class="fas fa-users fa-2x text-gray-300"></i>
@@ -60,7 +60,7 @@
     </div>
 </div>
 
-<!-- Earnings (Monthly) Card Example -->
+<!-- Total Payments Today -->
 <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-info shadow h-100 py-2">
         <div class="card-body">
@@ -83,7 +83,7 @@
     </div>
 </div>
 
-<!-- Pending Requests Card Example -->
+<!-- Total Payments (This Month) -->
 <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-warning shadow h-100 py-2">
         <div class="card-body">
@@ -102,7 +102,7 @@
 </div>
 
 
-<!-- Pending Requests Card Example -->
+<!-- Total Commissions (Today) -->
 <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-warning shadow h-100 py-2">
         <div class="card-body">
@@ -121,7 +121,7 @@
 </div>
 
 
-<!-- Commissions (Monthly) Card Example -->
+<!-- Total Commissions (This Month) -->
 <div class="col-xl-3 col-md-6 mb-4">
     <div class="card border-left-info shadow h-100 py-2">
         <div class="card-body">
@@ -143,5 +143,30 @@
         </div>
     </div>
 
+    
+
+</div>
+
+<!-- Total Payments Till Date -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Payments (Till Date)
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">&#x20A6;<?php echo $totalall ?></div>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-money-bill-alt fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 </div>
