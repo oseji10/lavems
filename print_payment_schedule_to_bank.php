@@ -25,6 +25,8 @@ $phone_no=$row["phone_no"];
 $client_email=$row["client_email"];
 $edi=$row["EDI"];
 
+
+
 ?>
 
 <?php
@@ -91,7 +93,7 @@ $amount=$row["amount"];
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">CREATE NEW PAYMENT</h1>
+                        <h1 class="h3 mb-0 text-gray-800">REPORT: GENERATE DETAILED PAYMENT SCHEDULE</h1>
                         <a href="subvendor2.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-pen fa-sm text-white-50"></i> For Clients Choosing Littlefingers As Vendor</a>
 
@@ -129,13 +131,13 @@ $amount=$row["amount"];
                             <!-- Illustrations -->
                             <div class="card shadow mb-12">
                                 <div class="card-header py-6">
-                                    <h6 class="m-0 font-weight-bold text-primary">Receipt Issuance</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Enter Date Range Below</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="text-left">
                                    
                                     </div>
-                                    <form method="POST" action="insert_payment.php">
+                                    <form method="POST" action="payment_schedule_to_bank.php">
                                     <fieldset>
           
           <?php
@@ -154,56 +156,19 @@ $amount=$row["amount"];
 
 <table border="1" width="70%" class="table table-striped table-bordered mb-0">
 
-<input type="hidden" name="payment_date" value="<?php echo date("Y-m-d"); ?>">
+
+
 <tr>
-<td width="20%"><h5>Client ID: </h5></td>
-<td><h5><?php echo $client_id2; ?> </h5></td>
+<td width="20%"><h5>From: </h5></td>
+<td width="50%"><input class="form-control" id='a' type='date' name='a' /></td>
 </tr>
 
 <tr>
-<td width="20%"><h5>Invoice ID: </h5></td>
-<td><h5><?php echo $invoice_no; ?> </h5></td>
+<td width="20%"><h5>To: </h5></td>
+<td width="50%"><input class="form-control" id='b' type='date' name='b' /></td>
 </tr>
 
-<tr>
-<td width="20%"><h5>Client Name: </h5></td>
-<td><h5><?php echo $fullname; ?> </h5></td>
-</tr>
 
-<tr>
-<td width="20%"><h5>Email: </h5></td>
-<td><h5><?php echo $client_email; ?> </h5></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>Phone: </h5></td>
-<td><h5><?php echo $phone_no; ?> </h5></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>EDI: </h5></td>
-<td><h5><?php echo $edi; ?> </h5></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>Total Amount: </h5></td>
-<td><h5><?php echo "&#8358;"; echo number_format(($amount),2); ?> </h5></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>Commission Charged: </h5></td>
-<td><input id='commission' type='number' class="form-control" name='commission' /></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>Funds Transfer Date: </h5></td>
-<td><input id='transfer_date' type='date' class="form-control" name='transfer_date' /></td>
-</tr>
-
-<tr>
-<td width="20%"><h5>Remarks: </h5></td>
-<td><textarea id='commission'  class="form-control" name='remarks'> </textarea></td>
-</tr>
 
 </table>
           <br/>
@@ -213,22 +178,12 @@ $amount=$row["amount"];
 
    
 
-                                    <div class='item'>
-      <label for='state'>Payment Status</label>
-                                    <select name='status' class='form-control' style='width:100%' required>
-                                    <option  value=''>--Select--</option> 
-                                   
-                                    
-                                    <option value='0'> Awaiting Confirmation</option>
-                                    <option value='1'> Payment Received By Littlefingers</option>
-                                    <option value='2'> Payment Processed To Vendor/Sub-vendor</option>
-                                    </select><br/>
 
                                     <br/>
     
 
 
-                                    <input type='submit' value='Save and Generate Receipt...' style=' background-color: #4CAF50; border: none; color: white;
+                                    <input type='submit' value='Generate Report...' style=' background-color: #4CAF50; border: none; color: white;
 padding: 15px 32px;
 text-align: center;
 text-decoration: none;

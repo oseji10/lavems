@@ -43,6 +43,7 @@ $amount_payable=$_POST['amount_payable'];
 $account_name=$_POST['subvendor_account_name'];
 $account_no=$_POST['subvendor_account_number'];
 $transfer_date=$_POST['transfer_date'];
+$payment_date=$_POST['payment_date'];
 
 $msgs3="Congratulations! You have made a new payment. ";
 
@@ -70,8 +71,8 @@ if ($link->query($sql2) === TRUE) {
     //echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
-$sql3 = "INSERT INTO subvendor (client_id, commission, remarks, invoice_no, account_name, account_no, bank, amount, amount_payable)
-VALUES ('".$client_id."', '".$commission."', '".$remarks."', '".$invoice_no."', '".$account_name."', '".$account_no."', '".$bank."', '".$amount."' ,  '".$amount_payable."')";
+$sql3 = "INSERT INTO subvendor (client_id, commission, remarks, invoice_no, account_name, account_no, bank, amount, amount_payable, payment_date)
+VALUES ('".$client_id."', '".$commission."', '".$remarks."', '".$invoice_no."', '".$account_name."', '".$account_no."', '".$bank."', '".$amount."' ,  '".$amount_payable."', '".$payment_date."')";
             
 if ($link->query($sql3) === TRUE) {
 

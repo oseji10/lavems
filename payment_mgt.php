@@ -116,7 +116,7 @@ $department=$row["department"];
                 
                               
 								
-$sql="select  * from payments, subvendor order by payment_date desc";            
+$sql="select  * from subvendor order by payment_date desc";            
                 if($result = mysqli_query($link, $sql)){
                 if(mysqli_num_rows($result) > 0){
                     

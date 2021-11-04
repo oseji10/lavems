@@ -64,7 +64,7 @@ $department=$row["department"];
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">PROCESSED PAYMENTS</h1>
+                        <h1 class="h3 mb-0 text-gray-800">GENERAL PAYMENT SCHEDULE PAYMENTS</h1>
                         <a href="process_payments.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-pen fa-sm text-white-50"></i> Process Payment</a>
 
@@ -127,16 +127,19 @@ $sql="select  * from subvendor where payment_date between '".$a."' AND  '".$b."'
 									echo "<table id='example2' border='1' align='center' width='100%' class='table table-striped table-bordered mb-0'>";
 									echo "<thead>";
                                     echo "<tr>";
-									echo "<th>&nbsp;&nbsp;PAYMENT ID</th>";
-                                    echo "<th>&nbsp;&nbsp;INVOICE NUMBER</th>";
-									echo "<th>&nbsp;&nbsp;CLIENT ID</th>";
-									echo "<th>&nbsp;&nbsp;CLIENT NAME</th>";
-                                    //echo "<th>&nbsp;&nbsp;EMAIL</th>";
-                                    echo "<th>&nbsp;&nbsp;AMOUNT</th>";
-                                    echo "<th>&nbsp;&nbsp;PROCESS DATE</th>";
-                                    // echo "<th>&nbsp;&nbsp; STATUS</th>";
+									// echo "<th>PAYMENT ID</th>";
+                                    // echo "<th>INVOICE NUMBER</th>";
+									// echo "<th>CLIENT ID</th>";
+									echo "<th>CLIENT NAME</th>";
+                                    echo "<th>SUBVENDOR</th>";
+                                    echo "<th>BANK</th>";
+                                    echo "<th>ACCOUNT</th>";
+                                    echo "<th>CREDIT TO CLIENT</th>";
+                                    echo "<th>OUR COMMISSION</th>";
+                                    echo "<th>PROCESS DATE</th>";
+                                    // echo "<th> STATUS</th>";
 									
-									echo "<th>&nbsp;&nbsp;ACTION</th>";
+									echo "<th>ACTION</th>";
 									echo "</tr>";
                                     echo "</thead>";
 									while($row = mysqli_fetch_array($result)){
@@ -147,7 +150,11 @@ $sql="select  * from subvendor where payment_date between '".$a."' AND  '".$b."'
                                         $status=$row["status"];
                                         $amount=$row["amount"];
                                         $pid=$row["subvendor_id"];
+                                        $bank=$row["bank"];
+                                        $account=$row["account_no"];
+                                        $commission=$row["commission"];
                                         $amount2=number_format(($amount),2);
+                                        $commission2=number_format(($commission),2);
 
                                       $sql2 = "SELECT * FROM clients WHERE client_id='".$client_id."'";
                                       $result2=mysqli_query($link,$sql2);
@@ -155,6 +162,7 @@ $sql="select  * from subvendor where payment_date between '".$a."' AND  '".$b."'
                                       $client_id2=$row2["client_id"];
                                       $fullname=$row2["fullname"];
                                       $client_email=$row2["client_email"];
+                                      $EDI=$row2["EDI"];
                                       
                                     //   switch ($status) {
                                     //     case "0":
@@ -169,14 +177,17 @@ $sql="select  * from subvendor where payment_date between '".$a."' AND  '".$b."'
                                     //          }
                                             //  echo "<tbody>";	
 									echo "<tr>";
-									echo "<td>  &nbsp;&nbsp;" .$pid."</td>";
-                                    echo "<td>  &nbsp;&nbsp;" .$invoice_no."</td>";
-									echo "<td>  &nbsp;&nbsp;" .$client_id2."</td>";
-                                    echo "<td>  &nbsp;&nbsp;" .$fullname."</td>";
-                                    //echo "<td>  &nbsp;&nbsp;" .$pid."</td>";
-                                    echo "<td>  &nbsp;&nbsp;&#8358;" .$amount2."</td>";
-                                    echo "<td>  &nbsp;&nbsp;" .$payment_date."</td>";
-                                    // echo "<td>  &nbsp;&nbsp;" .$status2."</td>";
+									// echo "<td>  " .$pid."</td>";
+                                    // echo "<td>  " .$invoice_no."</td>";
+									// echo "<td>  " .$client_id2."</td>";
+                                    echo "<td>  " .$fullname."</td>";
+                                    echo "<td>  " .$EDI."</td>";
+                                    echo "<td>  " .$bank."</td>";
+                                    echo "<td>  " .$account."</td>";
+                                    echo "<td>  &#8358;" .$amount2."</td>";
+                                    echo "<td>  &#8358;" .$commission2."</td>";
+                                    echo "<td>  " .$payment_date."</td>";
+                                    // echo "<td>  " .$status2."</td>";
 								
 									echo "<td style='text-transform:uppercase;'>  <a style='color:green;'target='_blank' href='view_receipt.php?client_id=".$row['client_id']."&&invoice_no=".$row['invoice_no']."'>" ." PRINT"."</a>&nbsp;"; echo "|&nbsp;"; echo "<a style='color:green;' href='pdfstore.php?client_id=".$row['client_id']."&&invoice_no=".$row['invoice_no']."&&client_email=".$client_email."'>" ."Email"."</a> <br/>  </td>";
 									echo "</tr>";

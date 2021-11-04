@@ -154,7 +154,7 @@ $amount=$row["amount"];
 
 <table border="1" width="70%" class="table table-striped table-bordered mb-0">
 
-
+<input type="text" name="payment_date" value="<?php echo date("Y-m-d"); ?>">
 <tr>
 <td width="20%"><h5>Client ID: </h5></td>
 <td><h5><?php echo $client_id2; ?> </h5></td>
@@ -192,12 +192,12 @@ $amount=$row["amount"];
 
 <tr>
 <td width="20%"><h5>Commission Charged: </h5></td>
-<td><input id='commission' type='number' class="form-control" name='commission' /></td>
+<td><input id='commission' type='number' class="form-control" name='commission' required/></td>
 </tr>
 
 <tr>
 <td width="20%"><h5>Funds Transfer Date: </h5></td>
-<td><input id='transfer_date' type='date' class="form-control" name='transfer_date' /></td>
+<td><input id='transfer_date' type='date' class="form-control" name='transfer_date' required/></td>
 </tr>
 
 <tr>
