@@ -130,7 +130,7 @@ $department=$row["department"];
     <br/>
       <div class='item'>
       <label for='phone_no'>Phone Number<span></span></label>
-      <input id='phone_no' type='text' name='phone_no' />
+      <input id='phone_no' type='text' name='phone_no' require/>
     </div>
     <br/>
       <div class='item'>
