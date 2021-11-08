@@ -128,6 +128,7 @@
                         
                         <a class="collapse-item" href="general_payment_report.php">Payment Schedule</a>
                         <a class="collapse-item" href="print_payment_schedule_to_bank.php">Payment Schedule To Bank</a>
+                        <a class="collapse-item" href="commission_report.php">Commissions Received</a>
                         <a class="collapse-item" href="processed_payments.php">Processed Payments</a>
                         <a class="collapse-item" href="processed_payments.php">View Proformas Issued</a>
                         <a class="collapse-item" href="commisson.php">View Proformas Issued</a>

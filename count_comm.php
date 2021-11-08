@@ -45,3 +45,21 @@ $commm=number_format(($uu2),2);
 //$totalm2=number_format(($uu1+$uu2+$uu3+$uu4+$uu5+$uu6+$uu7+$uu8+$uu9+$uu10+$uu11+$uu12+$uu13+$uu14+$uu15+$uu16),2);
 
 ?>
+<?php
+
+$sql2="select  SUM(commission) as total3 from subvendor";
+
+$result2=mysqli_query($link,$sql2);
+$row2=mysqli_fetch_assoc($result2);
+
+
+
+$uu2= $row2['total3'];
+
+
+$commall=number_format(($uu2),2);
+
+
+//$totalm2=number_format(($uu1+$uu2+$uu3+$uu4+$uu5+$uu6+$uu7+$uu8+$uu9+$uu10+$uu11+$uu12+$uu13+$uu14+$uu15+$uu16),2);
+
+?>
