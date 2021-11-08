@@ -258,21 +258,21 @@ $get_amount=$class_obj->convert_number($tt);
 
 <table width='100%' border='0'>
   <tr>
-    <td colspan='2' style='text-align:center; font-weight:bold; font-size:16px'>Bank Account Name: Little Fingers Integrated<br/>Bank: NIRSAL MFB<br/>Account number: 0250265614<br/><br/></td>
+    <td colspan='2' style='text-align:center; font-weight:bold; font-size:16px'>Bank Account Name: Little Fingers Integrated<br/>Bank: NIRSAL MFB<br/>Account number: 0250265614<br/></td>
 </tr>
 <tr>
-<td style='text-align:left' width="30%"><br/><img src="img/signLAVEMS.jpeg" width="100px" height="100px"/><hr style='border-bottom:dotted'/></td>
-    <td></td>
+<td colspan="2" style='text-align:center' width="40%"><br/><img src="img/okuma.jpeg" width="100px" height="100px"/><hr style='border-bottom:dotted' width="200px"/></td>
+    
 </tr>
 <tr>
-    <td style='text-align:left'>For: Little Fingers<br/></td>
+    <td style='text-align:center' colspan="2">Orkuma Hembe<br/>Managing Director<br/></td>
     
 </tr>
 </table>
 <footer>
   <br/>
 	
-	<p style="text-align:center">We declare that the above information is true and correct to the best of our knowledge. For and on behalf of the above-named company.
+	<p style="text-align:center; font-size:12px">We declare that the above information is true and correct to the best of our knowledge. For and on behalf of the above-named company.
 This proforma invoice is valid for 30 days</p>
 	<p><i style="font-size:10px">Generated from LAVEMS servers at <?php date_default_timezone_set("Africa/Lagos"); echo date('Y-m-d h:i:sa'); ?></i></p>
 </footer>

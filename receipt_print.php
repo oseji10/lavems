@@ -271,11 +271,11 @@ $get_amount=$class_obj->convert_number($tt);
     <td colspan='2' style='text-align:center; font-weight:bold; font-size:16px'><br/><br/></td>
 </tr>
 <tr>
-    <td style='text-align:left' width="30%"><br/><img src="img/signLAVEMS.jpeg" width="100px" height="100px"/><hr style='border-bottom:dotted'/></td>
-    <td></td>
+<td colspan="2" style='text-align:center' width="40%"><br/><img src="img/okuma.jpeg" width="100px" height="100px"/><hr style='border-bottom:dotted' width="200px"/></td>
+    
 </tr>
 <tr>
-    <td style='text-align:left'>For: Little Fingers<br/></td>
+    <td style='text-align:center' colspan="2">Orkuma Hembe<br/>Managing Director<br/></td>
     
 </tr>
 </table>
